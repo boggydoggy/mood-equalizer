@@ -45,11 +45,11 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="artist"
+                        android:text="music_genre"
                         android:textSize="18sp"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:id="@+id/music_artist_bar"/>
+                        android:id="@+id/music_genre_bar" />
             </LinearLayout>
         </RelativeLayout>
     <LinearLayout
@@ -58,19 +58,7 @@
             android:gravity="center"
             android:background="#FFF"
             android:orientation="horizontal">
-        <Button
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:id="@+id/enable_btn"
-                android:text="적용 해제">
-        </Button>
-        <Button
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="50dp"
-                android:id="@+id/to_setting_btn"
-                android:text="설정 확인">
-        </Button>
+
     </LinearLayout>
     <RelativeLayout
             android:layout_width="match_parent"
@@ -106,16 +94,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignBottom="@id/seek_bar_design"/>
         <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/previous_music"
-                android:id="@+id/previous_btn"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"
-                android:layout_centerInParent="true"
-                android:layout_toStartOf="@+id/play_pause_btn"/>
-
-        <ImageButton
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:id="@+id/play_pause_btn"
@@ -123,14 +101,6 @@
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
                 android:layout_centerInParent="true" />
-        <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/skip_music"
-                android:id="@+id/next_btn"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"
-                android:layout_centerInParent="true"
-                android:layout_toEndOf="@id/play_pause_btn"/>
+
     </RelativeLayout>
 </LinearLayout>

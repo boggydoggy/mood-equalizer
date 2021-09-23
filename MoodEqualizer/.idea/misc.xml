@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/zhd40/Documents/GitHub/mood-equalizer/MoodEqualizer/app/src/main/res/layout/activity_main.xml" value="0.12239583333333333" />
+        <entry key="..\:/Users/zhd40/Documents/GitHub/mood-equalizer/MoodEqualizer/app/src/main/res/layout/activity_music_player.xml" value="0.1" />
+        <entry key="..\:/Users/zhd40/Documents/GitHub/mood-equalizer/MoodEqualizer/app/src/main/res/layout/music_list.xml" value="0.1296875" />
         <entry key="..\:/Users/zhd40/react-nativeProjects/ypolaris_ketsup_react/MoodEqualizer/app/src/main/res/drawable/file_name_box.xml" value="0.1421875" />
         <entry key="..\:/Users/zhd40/react-nativeProjects/ypolaris_ketsup_react/MoodEqualizer/app/src/main/res/drawable/stop_circle.xml" value="0.14583333333333334" />
         <entry key="..\:/Users/zhd40/react-nativeProjects/ypolaris_ketsup_react/MoodEqualizer/app/src/main/res/layout/activity_file_open.xml" value="0.12604166666666666" />
