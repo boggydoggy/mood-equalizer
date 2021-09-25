@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(), OnMusicSelect, View.OnClickListener, O
                 val currentId = cursor.getLong(musicId)
                 val currentTitle = cursor.getString(musicTitle)
                 val currentArtist = cursor.getString(musicArtist)
-                val currentGenre = "Unknown_Genre"
+                val currentGenre = "Unknown_genre"
                 val currentDate = cursor.getLong(musicDate)
 
                 list.add(MusicModel(currentId, currentTitle, currentArtist, currentGenre, currentDate))
@@ -116,13 +116,33 @@ class MainActivity : AppCompatActivity(), OnMusicSelect, View.OnClickListener, O
         selectedMusicUri = ContentUris.withAppendedId(audioUri, music.musicId)
         musicModel = music
 
-        Log.d("pressed","button is pressed.")
-        var thread = NetworkThread()
-        thread.start()
-
-        //musicService.setListener(this)
-
-        //updateUI()
+        //new_music.wav is selected
+        if(musicModel.musicTitle.startsWith("new")){
+            musicService.setMusic(musicModel)
+            updateUI(musicModel)
+        }
+        else {
+            var checkNewMusic = 0
+            val musicName = musicModel.musicTitle
+            while(
+                currentMusic < list.size) {
+                if(list[currentMusic].musicTitle == "new_$musicName") {
+                    checkNewMusic = 1
+                }
+                currentMusic++
+            }
+            //music.wav is selected while new_music.wav is exist
+            if(checkNewMusic == 1) {
+                musicService.setMusic(musicModel)
+                updateUI(musicModel)
+            }
+            //music.wav is selected while new_music.wav isn't exist
+            else {
+                var thread = NetworkThread()
+                thread.start()
+            }
+        }
+        musicService.setListener(this)
     }
 
     override fun onClick(v: View?) {
