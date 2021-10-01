@@ -96,6 +96,7 @@ class MainActivity : AppCompatActivity(), OnMusicSelect, View.OnClickListener, O
     private fun updateUI(musicModel: MusicModel) {
         bottom_layout.music_title_bar.text = musicModel.musicTitle
         bottom_layout.music_genre_bar.text = musicModel.musicGenre
+        play_pause_btn.setImageResource(R.drawable.pause_circle)
     }
 
     private var musicConnection : ServiceConnection = object : ServiceConnection {
@@ -248,7 +249,7 @@ class MainActivity : AppCompatActivity(), OnMusicSelect, View.OnClickListener, O
                 Log.d("fileName", "file name is $fileName")
 
                 //Receive music genre
-                val genreBuffer = ByteArray(10)
+                val genreBuffer = ByteArray(20)
                 inputStream.read(genreBuffer)
                 str = String(genreBuffer)
                 splitPoint = str.lastIndexOf("'")
